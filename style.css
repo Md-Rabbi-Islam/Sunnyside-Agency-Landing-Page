@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+:root{
+    /* Primary */
+    --Red400: hsl(7, 99%, 70%);
+    --Yellow500: hsl(51, 100%, 49%);
+    --Green800GraphicDesignText: hsl(167, 40%, 24%);
+    --Blue800PhotographyText: hsl(198, 62%, 26%);
+    --Green500Footer: hsl(167, 34%, 41%);
+
+    /* Neutral */
+    --Grey950: hsl(212, 27%, 19%);
+    --Grey600: hsl(213, 9%, 39%);
+    --Grey550: hsl(232, 10%, 55%);
+    --Grey400: hsl(210, 4%, 67%);
+    --White: hsl(0, 100%, 100%);
+    --color:hsl(167, 30%, 65%);
+
+    /* font */
+    --fontFBarlow:"Barlow",sans-serif;
+    --fBarlowW600:600;
+    --fontFFraunces:"Fraunces",sans-serif;
+    --fFrauncesW700:700;
+    --fFrauncesW900:900;   
+} 
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden scroll;
+    font-size: 18px;
+}
+img{
+    display: block;
+    height: auto;   
+    max-width: 100%;
+}
+.main-container{
+    max-width: 1440px; 
+    margin: 2rem auto;
+}
+.header{
+    height: 650px;
+    padding: 2rem;
+    background-image: url(./images/desktop/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header-flex{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.mobile{
+    display: none;
+}
+.main-menu .desktop-menu{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.main-menu a{
+    color: var(--White);
+    text-decoration: none;
+    cursor: pointer;
+    font-family: var(--fontFBarlow);
+    font-weight: var(--fBarlowW600);   
+}
+.main-menu .desktop-menu a:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: .8rem 2rem;
+    border-radius: 1.8rem;
+    font-family: var(--fontFFraunces);
+}
+.main-menu .mobile-menu,.icon-hamburger{
+    display: none;
+}
+.header-title{
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+.title{
+    font-size: 55px;
+    font-family: var(--fontFFraunces);
+    color: var(--White);
+    font-weight: var(--fFrauncesW900);
+    letter-spacing: .5rem;
+    text-align: center;
+}
+.down-arrow{
+    height: 100px;
+    width: 35px;
+    margin-top: 4rem;
+}
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:repeat(3,1fr);
+    gap: 0;
+}
+/* .content > div{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+} */
+
+.last-image-text-1{
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.last-image-text-2{
+    background-image: url(./images/desktop/image-photography.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.content-title{
+    font-size: 30px;
+    font-family: var(--fontFFraunces);
+    font-weight: var(--fFrauncesW900);
+    color: var(--Grey950);
+}
+.content-text{
+    font-family: var(--fontFBarlow);
+    /* font-size: 16px; */
+    color: var(--Grey550);
+    font-weight:var(--fBarlowW600);
+    margin: 2.5rem 0;
+}
+.text-container-first,.text-container-second{
+    display: grid;
+    place-content: center;
+    padding: 0 5rem;
+
+}
+.content-btn{
+    border: none;
+    cursor: pointer;
+    font-family: var(--fontFFraunces);
+    font-weight: var(--fFrauncesW700);
+    font-size: 22px;
+    background-color: transparent;
+}
+.first-btn:hover{
+    text-decoration:underline 8px var(--Yellow500);
+}
+.second-btn:hover{
+    text-decoration:underline 8px var(--Red400);
+}
+.last-item{
+    position: relative;
+}
+.last{
+    position: absolute;
+    bottom: 3rem;
+    text-align: center;
+    padding:0 4rem 2rem 4rem;
+}
+.last-content-title{
+    font-size: 25px;
+    font-weight: var(--fFrauncesW700);
+    font-family: var(--fontFFraunces);
+    margin-bottom: 1.5rem;
+}
+.graphic{
+    color: var(--Green800GraphicDesignText);
+}
+.photo{
+    color: var(--Blue800PhotographyText);
+}
+.last-text{
+    font-family: var(--fontFBarlow);
+    font-size: 17px;
+    font-weight:var(--fBarlowW600);
+    color: var(--Grey600);
+}
+.client-testimonials{
+    text-align: center;
+}
+.title-client{
+    font-size: 28px;
+    font-family: var(--fontFFraunces);
+    font-weight: var(--fFrauncesW700);
+    color: var(--Grey400);
+    margin: 5rem 0 3rem 0;
+    letter-spacing: .4rem;
+}
+.testimonials-section{
+    display: flex;
+    gap: 2rem;
+}
+.client-info{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;   
+}
+.profile-pic{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.name{
+    font-size: 20px;
+    font-family: var(--fontFFraunces);
+    font-weight: var(--fFrauncesW700);
+    color: var(--Grey950);
+    margin-bottom: .8rem;
+}
+.client-subtitle{
+    font-size: 15px;
+    color: var(--Grey400);
+    font-family: var(--fontFBarlow);
+    font-weight: var(--fBarlowW600);
+    margin-bottom: 5rem;
+}
+.last-image-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.footer-section{
+    background-color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem 2rem;
+    gap: 2.5rem;
+}
+.footer-menu a{
+    text-decoration: none;
+    font-family: var(--fontFBarlow);
+    font-weight: var(--fBarlowW600);
+    color:hsl(169, 27%, 24%);
+    display: inline-block;
+    padding-bottom: 1rem;
+}
+.footer-menu li{
+    text-align: center;
+}
+.footer-menu a:hover{
+    color: var(--White);
+}
+.social-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    cursor: pointer;
+    fill: var(--Green800GraphicDesignText);
+}
+.icon:hover{
+    transition: .1s;
+    fill:var(--White)
+}
+
+
+
+
+
+
+
+
+
+
+
