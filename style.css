@@ -31,7 +31,7 @@
 }
 body{
     height: 100vh;
-    width: 100%;
+    max-width: 100vw;
     overflow: hidden scroll;
     font-size: 18px;
 }
@@ -145,7 +145,6 @@ img{
     display: grid;
     place-content: center;
     padding: 0 5rem;
-
 }
 .content-btn{
     border: none;
